@@ -7,21 +7,11 @@ The graph dataset is structured as follows:
 
 ![image](https://github.com/preeti-me/Saliency-graph/assets/80210264/8d505a48-4c27-4f8c-b7f0-81fbb6dadde7)
 
-buildingdata
-└── building1
-    ├── name               # building name
-    ├── rooms         
-    │   ├── name               # rooms name ex: kitchen, bedroom
-    │   ├── rgbimages          # color images
-    │   ├── depthimages        # depth images
-    │   ├── salientobjects     # salient objects properties
-    │       ├── labels     
-    │       ├── Volume
-    │       ├── centroid
-    │       ├── corners    
-    │       ├── orientation  
-    │       └── objectPointClouds 
-    │   ├── adjacency matrix
-    │   └── saliency graph     # graph consists of salient objects as nodes and adjacency matrix
-└── ...
-	
+```bash
+cd threedod
+bash python_venv_setup.sh
+
+git add <filename.md>
+git commit -m "Add command cell to set up Python virtual environment"
+git push origin <branch-name>
+
