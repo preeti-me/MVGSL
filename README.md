@@ -1,4 +1,4 @@
-# Saliency-graph
+# Scene Localization Through Multi-view Graph Summary Matching
 This repo contains the data used in the paper, 
 
 
