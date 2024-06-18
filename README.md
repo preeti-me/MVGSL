@@ -32,7 +32,9 @@ SVG_cons: single-view graph construction\
 MVG_cons: multi-view graph construction\
 Matching: Scene localization\
 calculateEdfm: Comput Essential matrix\
-results folder contains the correspondence point to calculate E matrix.
+results folder contains the correspondence point to calculate E matrix.\
+The output folder contains the images of the generated SVG and MVG.\
+node2vec folder contains the embedding vectors for GT and query.
 
 
 # Refernces
