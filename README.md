@@ -20,6 +20,7 @@ buildingdata
     │       ├── corners    
     │       ├── orientation  
     │       └── objectPointClouds 
-    │   ├── adjacency matrix
-    │   └── saliency graph     # graph consists of salient objects as nodes and adjacency matrix
+    │   ├── newadjacencyMatrix  %graph adjacency matrix
+    │   ├── comp_adj  %complement of an adjacency matrix
+    │   └── comp_graph     # graph consists of salient objects as nodes and comp_adj
 └── ...
