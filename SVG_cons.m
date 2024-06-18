@@ -3,7 +3,7 @@ clc;clear;close all;
 load('building_data.mat');
 
 
-buildingNumber=2; 
+buildingNumber=1; 
 
 fieldName = sprintf('building%d', buildingNumber);
 
@@ -11,18 +11,18 @@ fieldName = sprintf('building%d', buildingNumber);
 
 rooms=eval(['buildingdata.' fieldName '.rooms']);
 
- for ri=3%1:length(rooms)
+ for ri=2%1:length(rooms)
     
      roomno= eval(['buildingdata.' fieldName '.rooms(ri)']);
 
-for i=3 %1:length(roomno.salientobjects)
+for i=1 %1:length(roomno.salientobjects)
 
     depthimg=roomno.depthimages{i};
    [h w]=size(depthimg);
    meanDepth=depthimg(ceil(h/2),ceil(w/2));
    meanDepth=double(meanDepth);
    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    a=buildingdata.building2.rooms(ri).salientobjects{i};
+    a=buildingdata.building1.rooms(ri).salientobjects{i};
 
   for sj=1:length(a)
   labels{1,sj}=a(sj).labels;
