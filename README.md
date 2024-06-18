@@ -24,11 +24,11 @@ buildingdata
     │   └── comp_graph     # graph consists of salient objects as nodes and comp_adj
 └── ...
 
-    
+```    
 # Code
-SVG_cons: single-view graph construction\\
-MVG_cons: multi-view graph construction\\
-Matching: Scene localization\\
-
+SVG_cons: single-view graph construction\
+MVG_cons: multi-view graph construction\
+Matching: Scene localization\
+```
 
 
