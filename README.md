@@ -1,5 +1,4 @@
-# Scene Localization Through Multi-view Graph Summary Matching
-This repo contains the implementation of (i) Weighted saliency graph from multi-view RGB-D sequences belonging to an indoor scene. (ii) Scene localization for an input query image through a graph summary matching approach. 
+This repo contains the implementation of (i) Graphical summary generation from the multi-view RGB-D images of an indoor scene; (ii) Scene localization for an input query image through a graph summary matching approach. 
 
 # Dataset structure
 The graph dataset is structured as follows:
