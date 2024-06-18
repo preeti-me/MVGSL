@@ -45,3 +45,11 @@ results folder contains the correspondence point to calculate E matrix.
   year={2015}
 }
 
+@inproceedings{efe2021dfm,
+  title={Dfm: A performance baseline for deep feature matching},
+  author={Efe, Ufuk and Ince, Kutalmis Gokalp and Alatan, Aydin},
+  booktitle={CVPR},
+  pages={4284--4293},
+  year={2021}
+}
+
