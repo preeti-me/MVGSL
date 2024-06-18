@@ -1,32 +1,53 @@
 clc;clear;close all;
 
-addpath('/home/vision/Desktop/new/graph/SUNRGBDtoolbox/SUNRGBDtoolbox/')
-addpath('/home/vision/Desktop/new/graph/SUNRGBDtoolbox/SUNRGBDtoolbox/n/fs/sun3d/data/SUNRGBD/kv1/NYUdata/')
-
 load('building_data.mat');
-
 
 
 buildingNumber=2; 
 
 fieldName = sprintf('building%d', buildingNumber);
 
-%queryadj=eval(['buildingdata.' fieldName '.rooms(ri).bin_normalizedAdj{1,view}']);
 %%
-
 
 rooms=eval(['buildingdata.' fieldName '.rooms']);
 
- for ri=6%1:length(rooms)
+ for ri=3%1:length(rooms)
     
      roomno= eval(['buildingdata.' fieldName '.rooms(ri)']);
 
-for i=1:length(roomno.salientobjects)
+for i=3 %1:length(roomno.salientobjects)
 
     depthimg=roomno.depthimages{i};
    [h w]=size(depthimg);
    meanDepth=depthimg(ceil(h/2),ceil(w/2));
-   meanDepth=double(meanDepth);%meanDepth=double(meanDepth/1000);
+   meanDepth=double(meanDepth);
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    a=buildingdata.building2.rooms(ri).salientobjects{i};
+
+  for sj=1:length(a)
+  labels{1,sj}=a(sj).labels;
+  end
+
+
+  unique_labels = {};
+for ii = 1:numel(labels)
+    if sum(strcmp(unique_labels, labels{ii})) == 0
+        % If the label is not already in the list of unique labels, add it
+        unique_labels{end+1} = labels{ii};
+    else
+        % If the label is already in the list of unique labels, add a unique identifier
+        jj = 1;
+        new_label = sprintf('%s_%d', labels{ii}, jj);
+        while sum(strcmp(unique_labels, new_label)) > 0
+            jj = jj + 1;
+            new_label = sprintf('%s_%d', labels{ii}, jj);
+        end
+        unique_labels{end+1} = new_label;
+    end
+end
+
+uninodes = unique_labels;
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     for j=1:length(roomno.salientobjects{1,i})
 
@@ -69,13 +90,18 @@ for oi = 1:numObjects
 end
 
 
+n = size(newadjacencyMatrix, 1); %size of the matrix
+
+newadjacencyMatrix(1:n+1:end) = 0; %Set diagonal elements to zero
+
 %buildingdata.building2.rooms(ri).newadjacencyMatrix{i}= newadjacencyMatrix;
+SVG=graph(newadjacencyMatrix,uninodes);
+figure; plot(SVG);
 
 
-%%
 end
 
  end
 
-%%
+
 
