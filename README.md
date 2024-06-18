@@ -2,7 +2,7 @@
 This repo contains the implementation of (i) Graphical summary generation from the multi-view RGB-D images of an indoor scene; (ii) Scene localization for an input query image through a graph summary matching approach. 
 
 # Dataset structure
-The graph dataset is structured as follows:
+The graph dataset https://drive.google.com/file/d/171YAnPZ1RESDE4o9kRyup_yLnT-xJ1eQ/view?usp=sharing is structured as follows:
 
 ```bash
 buildingdata
