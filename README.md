@@ -30,7 +30,9 @@ You can download the SUNRGBD data from https://rgbd.cs.princeton.edu/
 # Code
 SVG_cons: single-view graph construction\
 MVG_cons: multi-view graph construction\
-Matching: Scene localization
+Matching: Scene localization\
+calculateEdfm: Comput Essential matrix\
+results folder contains the correspondence point to calculate E matrix.
 
 
 # Refernces
