@@ -53,3 +53,10 @@ results folder contains the correspondence point to calculate E matrix.
   year={2021}
 }
 
+@inproceedings{grover2016node2vec,
+  title={node2vec: Scalable feature learning for networks},
+  author={Grover, Aditya and Leskovec, Jure},
+  booktitle={Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining},
+  pages={855--864},
+  year={2016}
+}
