@@ -23,12 +23,23 @@ buildingdata
     │   ├── comp_adj  %complement of an adjacency matrix
     │   └── comp_graph     # graph consists of salient objects as nodes and comp_adj
 └── ...
-
-```    
+```
+Also, download 
+You can download the SUNRGBD data from https://rgbd.cs.princeton.edu/
+   
 # Code
 SVG_cons: single-view graph construction\
 MVG_cons: multi-view graph construction\
 Matching: Scene localization
 
 
+# Refernces
+```bash
+@inproceedings{song2015sun,
+  title={Sun rgb-d: A rgb-d scene understanding benchmark suite},
+  author={Song, Shuran and Lichtenberg, Samuel P and Xiao, Jianxiong},
+  booktitle={CVPR},
+  pages={567--576},
+  year={2015}
+}
 
