@@ -26,9 +26,9 @@ buildingdata
 
 ```
 # Code
-SVG_cons: single-view graph construction
-MVG_cons: multi-view graph construction
-Matching: Scene localization
+SVG_cons: single-view graph construction\\
+MVG_cons: multi-view graph construction\\
+Matching: Scene localization\\
 ```
 
 
