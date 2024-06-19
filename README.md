@@ -1,5 +1,9 @@
 # An Indoor Scene Localization Method Using Graphical Summary of Multi-view RGB-D Images
-This repo contains the implementation of (i) Graphical summary generation from the multi-view RGB-D images of an indoor scene; (ii) Scene localization for an input query image through a graph summary matching approach. 
+This repository contains the code for paper "An Indoor Scene Localization Method Using Graphical Summary of Multi-view RGB-D Images"
+The key contributions of the paper are: 
+(i) Graphical summary generation from the multi-view RGB-D images of an indoor scene; (ii) Scene localization for an input query image through a graph summary matching approach. 
+
+The framework for MVGSL comprising of two major stages, namely Graphical Summary Generation, and Scene Localization. 
 
 # Dataset structure
 The graph dataset https://drive.google.com/file/d/171YAnPZ1RESDE4o9kRyup_yLnT-xJ1eQ/view?usp=sharing is structured as follows:
@@ -27,7 +31,7 @@ buildingdata
 Also, download 
 You can download the SUNRGBD data from https://rgbd.cs.princeton.edu/
    
-# Code
+# Content
 SVG_cons: single-view graph construction\
 MVG_cons: multi-view graph construction\
 Matching: Scene localization\
