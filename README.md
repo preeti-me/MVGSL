@@ -5,7 +5,7 @@ The key contributions of the paper are:
 
 The framework for MVGSL comprising of two major stages, namely Graphical Summary Generation, and Scene Localization. 
 
-[methoddiag.pdf](https://github.com/user-attachments/files/15898118/methoddiag.pdf)
+![methoddiag.pdf](https://github.com/user-attachments/files/15898118/methoddiag.pdf)
 [methodlab.pdf](https://github.com/user-attachments/files/15898120/methodlab.pdf)
 
 # Dataset structure
