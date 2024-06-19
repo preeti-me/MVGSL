@@ -4,9 +4,10 @@ The key contributions of the paper are:
 (i) Graphical summary generation from the multi-view RGB-D images of an indoor scene; (ii) Scene localization for an input query image through a graph summary matching approach. 
 
 The framework for MVGSL comprising of two major stages, namely Graphical Summary Generation, and Scene Localization. 
+![methoddiag-1](https://github.com/preeti-me/MVGSL/assets/80210264/c1ad2ad9-b25a-423b-a491-c3495fb06edb)
+![methodlab-1](https://github.com/preeti-me/MVGSL/assets/80210264/e6ac61ff-d142-4458-b259-f43997f4287d)
 
-![methoddiag.pdf](https://github.com/user-attachments/files/15898118/methoddiag.pdf)
-[methodlab.pdf](https://github.com/user-attachments/files/15898120/methodlab.pdf)
+
 
 # Dataset structure
 The graph dataset https://drive.google.com/file/d/171YAnPZ1RESDE4o9kRyup_yLnT-xJ1eQ/view?usp=sharing is structured as follows:
