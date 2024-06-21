@@ -10,10 +10,10 @@ The framework for MVGSL comprising of two major stages, namely Graphical Summary
 
 
 
-# Dataset structure
+## Dataset structure
 The graph dataset https://drive.google.com/file/d/171YAnPZ1RESDE4o9kRyup_yLnT-xJ1eQ/view?usp=sharing is structured as follows:
 
-```bash
+```shell
 buildingdata
 └── building1
     ├── name               # building name
@@ -36,7 +36,7 @@ buildingdata
 Also, download 
 You can download the SUNRGBD data from https://rgbd.cs.princeton.edu/
    
-# Content
+## Content
 SVG_cons: single-view graph construction\
 MVG_cons: multi-view graph construction\
 Matching: Scene localization\
@@ -46,7 +46,7 @@ The output folder contains the images of the generated SVG and MVG.\
 node2vec folder contains the embedding vectors for GT and query.
 
 
-# Refernces and Citations
+## Refernces and Citations
 If you use the source code, please cite the following paper
 
 ```bash
