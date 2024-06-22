@@ -6,7 +6,7 @@ addpath('/home/vision/Desktop/new/graph/node2vec-master/node2vec_csv/csv/query/'
 load('building_data.mat');
 
 
-buildingNumber=1; rib=2; view=2; %%GT=B1S3
+buildingNumber=10; rib=2; view=2; %%GT=B10S2
 
  fieldName = sprintf('building%d', buildingNumber);
 
@@ -35,15 +35,11 @@ end
 
 querynodes = unique_labels;
 
-%queryadj=eval(['buildingdata.' fieldName '.rooms(rib).bin_normalizedAdj{view}']);
-%queryadj=buildingdata.building6.rooms(5).bin_normalizedAdj{1};
+
 queryadj=eval(['buildingdata.' fieldName '.rooms(rib).newadjacencyMatrix{view}']);
 querygraph = graph(queryadj,querynodes);
 queryedgelist=graph(queryadj);
 
-
-%querygraph = eval(['buildingdata.' fieldName '.rooms(rib).ford']);
-%queryedgelist=querygraph.Edges;
 
 %%
 rooms=eval(['buildingdata.' fieldName '.rooms']);
@@ -160,15 +156,7 @@ similarity = zeros(length(query_nodes), length(gt_nodes)); cosSimilarities = zer
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%tripletmatching%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% querytrip=queryedgelist.Edges.EndNodes(1,:); 
-% gttripind(1) = find(node_mapping(:,1)==querytrip(1));
-% gttripind(2) = find(node_mapping(:,1)==querytrip(2));
-% gttrip=[node_mapping(gttripind(1),2), node_mapping(gttripind(2),2)];
-% 
-% gttriplabel= {gtnode(gttrip(1)), gtnode(gttrip(2))};
-% 
 
-%gtgraph = buildingdata.building1.rooms(1).mvgraph;
 
 edges = gtgraph.Edges;
 numNodes = length(gtnode);
@@ -189,7 +177,6 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 databaseGraph = adjacencyMatrix; 
-%edgeWeights = [2 3 4]; 
 
 nodeAlignment = node_mapping;%[1 7; 2 11; 3 12; 4 13; 5 6; 6 14; 7 8];
 
@@ -201,20 +188,9 @@ alignedNodes = nodeAlignment(:, 2);
 %Extract the subgraph
 subgraph = databaseGraph(alignedNodes, alignedNodes);
 
-%isomorphic = isomorphism(graph(queryadj), graph(subgraph));
-
-% Calculate Frobenius norm as a similarity measure
-%adj_similarity = norm(queryadj - subgraph, 'fro');
-
-
-% G1=gtgraph; G2=querygraph;
-% % Plot the first graph
-% h1 = plot(G1, 'NodeLabel', G1.Nodes.Name,'MarkerSize', 10);
-% figure; h2 = plot(G2, 'NodeLabel', G2.Nodes.Name,'MarkerSize', 10);
-
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%subgraphtripletmatching%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%gtgraph = buildingdata.building1.rooms(1).mvgraph;
+
 
 alignednodeslabel= gtgraph.Nodes(alignedNodes,1);
 
@@ -255,17 +231,13 @@ adjacencyMatrix1 = zeros(numNodes);
 % Populate the adjacency matrix based on edges
 for i = 1:size(query_edges, 1)
    
-    %nodeIndex1 = find(strcmp(query_edges.EndNodes, edges.EndNodes(i,1)));
-    %nodeIndex2 = find(strcmp(query_nodeslabels, edges.EndNodes(i,2)));
-    %[~, indices] = ismember(query_edges(i,:).EndNodes, edges(:,:).EndNodes, 'rows');
+   
     indices = find(ismember(query_edges(i,:).EndNodes, edges(:,:).EndNodes, 'rows'));
 
     if ~isempty(indices)
     
      matchedweights(indices)=edges.Weight(indices);
-    %adjacencyMatrix1(nodeIndex1, nodeIndex2) = edges.Weight(i);
-    %adjacencyMatrix1(nodeIndex2, nodeIndex1) = edges.Weight(i); % Assuming the graph is undirected
-
+   
     else
         matchedweights(indices)=0;
         disp('triplet not exist in gt');
@@ -299,6 +271,12 @@ end
 end
 
 
+[maxscore, predicted_room] = max(score);
+
+predicted_scene= sprintf('B%dS%d', buildingNumber, predicted_room)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 function similarity = cosineSimilarity(vec1, vec2)
     % Ensure the input vectors have the same length
