@@ -1,4 +1,4 @@
-%clc;clear;close all;
+clc;clear;close all;
 
 load('building_data.mat');
 
@@ -12,7 +12,7 @@ data = buildingdata.building10.rooms;
      nimg=data(ri).rgbimages;
 
 
-for i=1:length(nimg)
+for i=1:size(nimg,2)
   
   depthimg=data(ri).depthimages{i};
 
@@ -21,11 +21,10 @@ meanDepth=depthimg(ceil(h/2),ceil(w/2));
 meanDepth=double(meanDepth);%meanDepth=double(meanDepth/1000);
 
 
-ADJi= buildingdata.building10.rooms.Adj_closestdistance_cntrd{1,i};
+ADJi= data(ri).Adj_closestdistance_cntrd{1,i};
 
-Compute the normalized adjacency matrix
+%%%Compute the normalized adjacency matrix
 normalizedAdj = ADJi./meanDepth;
-normalizedlapl = eye(size(ADJi)) - invSqrtDegreeMatrix * ADJi * invSqrtDegreeMatrix;
 sav_normalizedAdj{i}=normalizedAdj;
 
 
