@@ -51,26 +51,18 @@ node2vec folder contains the embedding vectors for GT and query.
 If you use the source code, please cite the following paper
 
 ```bash
-@inproceedings{song2015sun,
-  title={Sun rgb-d: A rgb-d scene understanding benchmark suite},
-  author={Song, Shuran and Lichtenberg, Samuel P and Xiao, Jianxiong},
-  booktitle={CVPR},
-  pages={567--576},
-  year={2015}
+
+@inproceedings{,
+  title={AN INDOOR SCENE LOCALIZATION METHOD USING GRAPHICAL SUMMARY OF MULTI-VIEW RGB-D IMAGES},
+  author={Meena, Preeti and Kumar, Himanshu and Yadav, Sandeep},
+  booktitle={ICIP},
+  pages={},
+  year={2024},
+  organization={IEEE}
 }
 
-@inproceedings{efe2021dfm,
-  title={Dfm: A performance baseline for deep feature matching},
-  author={Efe, Ufuk and Ince, Kutalmis Gokalp and Alatan, Aydin},
-  booktitle={CVPR},
-  pages={4284--4293},
-  year={2021}
-}
+## Acknowledgements
 
-@inproceedings{grover2016node2vec,
-  title={node2vec: Scalable feature learning for networks},
-  author={Grover, Aditya and Leskovec, Jure},
-  booktitle={Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining},
-  pages={855--864},
-  year={2016}
-}
+- Sun RGB-D
+- DFM
+- node2vec
