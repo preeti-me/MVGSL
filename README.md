@@ -47,7 +47,7 @@ node2vec folder contains the embedding vectors for GT and query.
 
 ## Usage
 
-## Refernces and Citations
+## Citation
 If you use the source code, please cite the following paper
 
 ```bash
