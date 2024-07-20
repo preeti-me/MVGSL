@@ -33,7 +33,6 @@ buildingdata
     │   └── comp_graph     # graph consists of salient objects as nodes and comp_adj
 └── ...
 ```
-Also, download 
 You can download the SUNRGBD data from https://rgbd.cs.princeton.edu/
    
 ## Content
