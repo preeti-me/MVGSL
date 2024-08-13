@@ -1,7 +1,7 @@
 clc;clear;close all;
-addpath('/home/vision/Desktop/new/graph/node2vec-master/emb/')
-addpath('/home/vision/Desktop/new/graph/node2vec-master/node2vec_csv/csv/gt/')
-addpath('/home/vision/Desktop/new/graph/node2vec-master/node2vec_csv/csv/query/')
+addpath('/node2vec-master/emb/')
+addpath('/node2vec_csv/csv/gt/')
+addpath('/node2vec_csv/csv/query/')
 
 load('building_data.mat');
 
