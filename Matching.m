@@ -1,7 +1,8 @@
 clc;clear;close all;
-addpath('/node2vec-master/emb/')
-addpath('/node2vec_csv/csv/gt/')
-addpath('/node2vec_csv/csv/query/')
+addpath('/content/MVGSL/node2vec-master/emb/');
+addpath('/content/MVGSL/node2vec-master/node2vec_csv/csv/gt/');
+addpath('/content/MVGSL/node2vec-master/node2vec_csv/csv/query/');
+
 
 load('building_data.mat');
 
