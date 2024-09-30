@@ -51,14 +51,16 @@ If you use the source code, please cite the following paper
 
 ```bash
 
-@inproceedings{,
-  title={AN INDOOR SCENE LOCALIZATION METHOD USING GRAPHICAL SUMMARY OF MULTI-VIEW RGB-D IMAGES},
+@INPROCEEDINGS{10648118,
   author={Meena, Preeti and Kumar, Himanshu and Yadav, Sandeep},
-  booktitle={ICIP},
-  pages={},
+  booktitle={2024 IEEE International Conference on Image Processing (ICIP)}, 
+  title={An Indoor Scene Localization Method Using Graphical Summary of Multi-View RGB-D Images}, 
   year={2024},
-  organization={IEEE}
-}
+  volume={},
+  number={},
+  pages={3306-3312},
+  doi={10.1109/ICIP51287.2024.10648118}}
+
 ```
 
 ## Acknowledgements
