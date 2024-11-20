@@ -49,16 +49,22 @@ node2vec folder contains the embedding vectors for GT and query.
 If you use the source code, please cite the following paper
 
 ```bash
-
-@INPROCEEDINGS{10648118,
+@inproceedings{meena2024indoor,
+  title={An Indoor Scene Localization Method Using Graphical Summary of Multi-View RGB-D Images},
   author={Meena, Preeti and Kumar, Himanshu and Yadav, Sandeep},
-  booktitle={2024 IEEE International Conference on Image Processing (ICIP)}, 
-  title={An Indoor Scene Localization Method Using Graphical Summary of Multi-View RGB-D Images}, 
+  booktitle={2024 IEEE International Conference on Image Processing (ICIP)},
+  pages={3306--3312},
   year={2024},
-  volume={},
-  number={},
-  pages={3306-3312},
+  organization={IEEE},
   doi={10.1109/ICIP51287.2024.10648118}}
+
+@article{meena2024volumetric,
+  title={A Volumetric Saliency Guided Image Summarization for RGB-D Indoor Scene Classification},
+  author={Meena, Preeti and Kumar, Himanshu and Yadav, Sandeep},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2024},
+  publisher={IEEE}
+}
 
 ```
 
