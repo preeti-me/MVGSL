@@ -55,8 +55,8 @@ If you use the source code, please cite the following paper
   booktitle={2024 IEEE International Conference on Image Processing (ICIP)},
   pages={3306--3312},
   year={2024},
-  organization={IEEE},
-  doi={10.1109/ICIP51287.2024.10648118}}
+  organization={IEEE}
+}
 
 @article{meena2024volumetric,
   title={A Volumetric Saliency Guided Image Summarization for RGB-D Indoor Scene Classification},
